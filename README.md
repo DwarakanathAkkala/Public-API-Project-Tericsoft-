@@ -12,7 +12,7 @@ Frontend (Single Page Application)
 
 ## Deployed App
 
-**Live Site:** [https://quote-generator-dwaraka.vercel.app/]
+**Live Site:** https://quote-generator-dwaraka.vercel.app/
 
 **API Source:** This project consumes data from the [DummyJSON Quotes API](https://dummyjson.com/docs/quotes), which provides a vast library of famous sayings and authors.
 
