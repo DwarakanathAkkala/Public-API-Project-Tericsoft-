@@ -8,13 +8,17 @@ const QuoteGenerator = () => {
 
   useEffect(() => {
     fetchQuote();
+    const interval = setInterval(() => {
+      fetchQuote();
+    }, 30000); // 30 seconds
+
+    return () => clearInterval(interval); // Cleanup
   }, []);
 
   const fetchQuote = async () => {
     try {
       const response = await fetch("https://dummyjson.com/quotes/random");
       const data = await response.json();
-      console.log(data)
       setQuote({
         content: data.quote,
         author: data.author
@@ -50,6 +54,12 @@ const QuoteGenerator = () => {
         <button className='generate-btn' onClick={fetchQuote} disabled={loading}>
           {loading ? "Loading..." : "Generate New Qoute"}
         </button>
+
+        
+        <div className="auto-refresh-indicator">
+          <div className="refresh-dot"></div>
+          Auto refreshing every 30 seconds
+        </div>
 
       </div>
     </div>
