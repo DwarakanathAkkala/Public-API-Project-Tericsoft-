@@ -1,6 +1,6 @@
 # Inspiration Flow: Your Daily Dose of Wisdom
 
-![Inspiration Flow](https://quote-generator-dwaraka.vercel.app/)
+![Inspiration Flow](./src/assets/Home.png)
 
 ## Introduction
 
